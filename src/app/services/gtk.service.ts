@@ -25,7 +25,7 @@ export class GTKService {
   getGTKs(): Observable<GTK[]>{
     return this.http.get(this.GTKUrl)
       .map(res  => {
-        return res["data"].docs as GTK[];
+        return res["data"] as GTK[];
       })
   }
 
