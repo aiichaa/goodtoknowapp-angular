@@ -29,11 +29,9 @@
           </ng-container>
 
           <ng-template #editTD>
-            <td><input type="text" name="action" id="action" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.action" placeholder="Action" class="form-control"></td>
-            <td><input type="text" name="fr_content" id="fr_content" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.fr_content" placeholder="French content"
-                       class="form-control"></td>
-            <td><input type="text" name="ar_content" id="ar_content" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.ar_content" placeholder="Arabic content"
-                       class="form-control"></td>
+            <td><textarea cols="40" rows="5" type="text" name="action" id="action" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.action" placeholder="Action" class="form-control"></textarea></td>
+            <td><textarea cols="40" rows="5" type="text" name="fr_content" id="fr_content" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.fr_content" placeholder="French content" class="form-control"></textarea></td>
+            <td><textarea cols="40" rows="5" type="text" name="ar_content" id="ar_content" (keypress)="submitGTK($event, gtk)" [(ngModel)]="gtk.ar_content" placeholder="Arabic content" class="form-control"></textarea></td>
           </ng-template>
 
           <td class="o">
@@ -55,13 +53,13 @@
       <div class="form-row">
 
         <div class="col-md-2">
-          <input type="text" name="action" id="action" [(ngModel)]="newGTK.action" placeholder="Action" class="form-control">
+          <textarea cols="40" rows="5" type="text" name="action" id="action" [(ngModel)]="newGTK.action" placeholder="Action" class="form-control"></textarea>
         </div>
         <div class="col-md-4">
-          <input name="fr_content" id="fr_content" [(ngModel)]="newGTK.fr_content" placeholder="French content" class="form-control">
+          <textarea cols="40" rows="5" name="fr_content" id="fr_content" [(ngModel)]="newGTK.fr_content" placeholder="French content" class="form-control"></textarea>
         </div>
         <div class="col-md-4">
-          <input name="ar_content" id="ar_content" [(ngModel)]="newGTK.ar_content" placeholder="Arabic content" class="form-control">
+          <textarea cols="40" rows="5" name="ar_content" id="ar_content" [(ngModel)]="newGTK.ar_content" placeholder="Arabic content" class="form-control"></textarea>
         </div>
         <div class="col-md-2">
           <button type="submit" class="btn btn-primary" (click)="create()">Add</button>
